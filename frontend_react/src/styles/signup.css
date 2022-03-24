@@ -1,0 +1,94 @@
+.form_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin: 100px 350px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e07a5f;
+  border-radius: 0 10px 10px 0;
+}
+
+.form_container .form_left_side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e07a5f;
+  padding: 50px 10px;
+}
+
+.form_container .form_left_side h3 {
+  padding: 20px 0;
+  font-size: 40px;
+  color: #f4f1de;
+  font-weight: bold;
+}
+
+.form_container .form_left_side img {
+  height: 150px;
+  width: 150px;
+}
+
+.form_container .form_right_side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f4f1de;
+  padding: 50px 10px;
+  margin: 10px;
+  border-radius: 0 10px 10px 0;
+}
+
+.form_container .form_right_side .form_field {
+  padding: 5px 0;
+}
+
+.form_container .form_right_side .form_field span {
+  padding-left: 5px;
+}
+
+.form_container .form_right_side .form_field input {
+  padding: 5px 20px;
+}
+
+.form_container .form_right_side button {
+  background-color: #e07a5f;
+  padding: 5px 20px;
+  margin: 0 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  color: #3d405b;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form_container .form_right_side button:hover {
+  background-color: #81b29a;
+}
+/*# sourceMappingURL=signup.css.map */

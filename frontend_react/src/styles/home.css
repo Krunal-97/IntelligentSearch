@@ -1,0 +1,103 @@
+.main-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.main-left-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f4f1de;
+  padding: 60px 0;
+}
+
+.main-left-container .left-text {
+  font-size: 48px;
+  text-align: center;
+}
+
+.main-left-container .main-left-button-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.main-left-container .main-left-button-container button {
+  background-color: #e07a5f;
+  padding: 5px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  color: #f4f1de;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.main-left-container .main-left-button-container button:hover {
+  background-color: #81b29a;
+}
+
+.main-left-container .main-bottom-text {
+  text-align: center;
+}
+
+.main-right-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f4f1de), to(#e07a5f));
+  background-image: linear-gradient(to right, #f4f1de, #e07a5f);
+  padding: 60px 0;
+}
+
+.home-info-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 50px 0 50px 0;
+}
+
+.home-info-container .home-info-card .home-info-image i {
+  font-size: 44px;
+  padding: 25px 0 25px 0;
+}
+
+.home-info-container .home-info-card .home-info-image i:hover {
+  font-size: 50px;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.home-info-container .home-info-card .home-info-image .home-info-text h3 {
+  font-weight: bold;
+  font-size: 36px;
+}
+/*# sourceMappingURL=home.css.map */

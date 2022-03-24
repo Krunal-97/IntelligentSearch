@@ -1,0 +1,68 @@
+$primary_color: #3d405b;
+$secondary_color: #f4f1de;
+$color_opt_1: #e07a5f;
+$color_opt_2: #81b29a;
+$color_opt_3: #f2cc8f;
+$text_color: white;
+
+.login_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 100px 350px;
+  justify-content: center;
+  align-items: center;
+  background-color: $color_opt_1;
+  border-radius: 0 10px 10px 0;
+  .login_left_side {
+    h3 {
+      padding: 20px 0;
+      font-size: 30px;
+      color: $secondary_color;
+      font-weight: bold;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_opt_1;
+    padding: 50px 10px;
+    img {
+      height: 120px;
+      width: 120px;
+    }
+  }
+
+  .login_right_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $secondary_color;
+    padding: 50px 10px;
+    margin: 10px;
+    border-radius: 0 10px 10px 0;
+
+    .form_field {
+      padding: 15px 0;
+      input {
+        padding: 5px 20px;
+      }
+    }
+
+    button {
+      background-color: $color_opt_1;
+
+      padding: 5px 20px;
+      margin: 0 10px;
+      color: $text_color;
+      border: none;
+      border-radius: 5px;
+      color: $primary_color;
+      font-size: 18px;
+      font-weight: bold;
+      &:hover {
+        background-color: $color_opt_2;
+      }
+    }
+  }
+}
