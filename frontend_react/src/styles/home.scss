@@ -39,6 +39,11 @@ $text_color: white;
       &:hover {
         background-color: $color_opt_2;
       }
+
+      .home_btn_link {
+        text-decoration: none;
+        color: $secondary_color;
+      }
     }
   }
 

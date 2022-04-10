@@ -1,4 +1,4 @@
-@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+// @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
 
 $primary_color: #3d405b;
 $secondary_color: #f4f1de;
@@ -26,30 +26,41 @@ $text_color: white;
     padding: 10px;
   }
 
-  button {
-    text-align: center;
-    background-color: $color_opt_1;
-    padding: 5px 20px;
-    margin: 0 10px;
-    color: $text_color;
-    border: none;
-    border-radius: 5px;
-    color: $primary_color;
-    font-size: 18px;
-    font-weight: bold;
-    &:hover {
-      background-color: $color_opt_2;
-    }
-  }
   .ans {
     span {
       font-weight: bold;
       font-size: 24px;
     }
     padding: 20px 10px;
-    margin: 35px 0;
+
     background-color: $color_opt_3;
     color: $primary_color;
     border-radius: 10px;
   }
+}
+
+button,
+.speechBtn {
+  text-align: center;
+  background-color: $color_opt_1;
+  padding: 5px 20px;
+  margin: 1rem;
+  color: $text_color;
+  border: none;
+  border-radius: 5px;
+  color: $secondary_color;
+  font-size: 18px;
+  font-weight: bold;
+  &:hover {
+    background-color: $color_opt_2;
+  }
+}
+.speechBtn {
+}
+
+.loadingBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }

@@ -50,6 +50,11 @@
   background-color: #81b29a;
 }
 
+.main-left-container .main-left-button-container button .home_btn_link {
+  text-decoration: none;
+  color: #f4f1de;
+}
+
 .main-left-container .main-bottom-text {
   text-align: center;
 }

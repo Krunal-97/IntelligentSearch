@@ -1,6 +1,8 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
+
+import { UserContext } from "../components/UserContext";
 import "./Navbar.css";
 
 function Navbar() {
@@ -8,6 +10,7 @@ function Navbar() {
   const token = sessionStorage.getItem("token");
   const userType = sessionStorage.getItem("userType");
   const userName = sessionStorage.getItem("userName");
+  const [val, setVal] = useContext(UserContext);
 
   const clickHandler = () => {
     setClicked(!clicked);
@@ -42,7 +45,7 @@ function Navbar() {
           </Link>
         </li> */}
 
-        {token && token != "" ? (
+        {val && val != "" ? (
           <li className="nav-item">
             <Link to="/log-out" className="nav-links">
               Log Out

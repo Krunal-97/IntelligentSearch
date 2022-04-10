@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import homeImg from "../../images/homeImg.PNG";
+import { UserContext } from "../UserContext";
+import { Link } from "react-router-dom";
 
 function Home() {
+  const val = useContext(UserContext);
   return (
     <div>
       <div className="main-container">
@@ -11,8 +14,16 @@ function Home() {
           </div>
 
           <div className="main-left-button-container">
-            <button>Sign Up</button>
-            <button>Log In</button>
+            <button>
+              <Link to="/sign-up" className="home_btn_link">
+                Sign In
+              </Link>
+            </button>
+            <button>
+              <Link to="/log-in" className="home_btn_link">
+                Log In
+              </Link>
+            </button>
           </div>
 
           <div className="main-bottom-text">

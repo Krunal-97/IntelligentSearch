@@ -1,9 +1,10 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 // import useHistory, { Link } from "use-history";
 import { useNavigate } from "react-router-dom";
 import login from "../../images/login.PNG";
 import "../../styles/login.css";
+import { UserContext } from "../UserContext";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -13,48 +14,56 @@ function Login() {
   const userName = sessionStorage.getItem("userName");
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
+  const [val, setVal] = useContext(UserContext);
+
+  async function handleSubmit(event) {
     event.preventDefault();
-    console.log({ email, password });
+    try {
+      console.log("fetch user data start");
+      const user = {
+        email: email,
+        password: password,
+      };
 
-    const user = {
-      email: email,
-      password: password,
-    };
+      const res = await axios.post(
+        "http://127.0.0.1:5000/api/user/login",
+        user
+      );
 
-    console.log(user);
+      sessionStorage.setItem("token", res.data.access_token);
+      sessionStorage.setItem("userType", res.data.role);
+      sessionStorage.setItem("userName", res.data.user["name"]);
 
-    axios
-      .post("http://127.0.0.1:5000/api/user/login", user)
-      .then((res) => {
-        console.log(res);
-        console.log(res.data.role);
-        // console.log(res.data.access_token);
+      const saveToken = () => setVal(res.data.access_token);
+      saveToken();
 
-        sessionStorage.setItem("token", res.data.access_token);
-        sessionStorage.setItem("userType", res.data.role);
-        sessionStorage.setItem("userName", res.data.user["name"]);
+      console.log({ val });
+      console.log(sessionStorage.getItem("token"));
+      console.log("fetch end");
 
-        console.log(token);
-        console.log(userType);
-        console.log(userName);
-
-        let resRole = res.data.role;
-        if (resRole === "Admin") {
-          navigate("/admindashboard");
-        } else if (resRole === "RegularUser") {
-          navigate("/search");
-        } else if (resRole === "PremiumUser") {
-          navigate("/search");
-        }
-      })
-      .catch((err) => console.log(err));
+      let resRole = res.data.role;
+      if (resRole === "Admin") {
+        navigate("/admindashboard");
+      } else if (resRole === "RegularUser") {
+        navigate("/search");
+      } else if (resRole === "PremiumUser") {
+        navigate("/search");
+      }
+    } catch (e) {
+      console.log(e);
+    }
   }
+
+  useEffect(() => {
+    setVal(sessionStorage.getItem("token"));
+    console.log({ val });
+  }, [val, setVal]);
 
   return (
     <form onSubmit={handleSubmit} className="login_container">
       <div className="login_left_side">
         <h3>Log In</h3>
+
         <img src={login}></img>
       </div>
 
