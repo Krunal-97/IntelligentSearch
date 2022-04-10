@@ -9,6 +9,8 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const token = sessionStorage.getItem("token");
+  const userType = sessionStorage.getItem("userType");
+  const userName = sessionStorage.getItem("userName");
   const navigate = useNavigate();
 
   function handleSubmit(event) {
@@ -27,8 +29,16 @@ function Login() {
       .then((res) => {
         console.log(res);
         console.log(res.data.role);
-        console.log(res.data.access_token);
+        // console.log(res.data.access_token);
+
         sessionStorage.setItem("token", res.data.access_token);
+        sessionStorage.setItem("userType", res.data.role);
+        sessionStorage.setItem("userName", res.data.user["name"]);
+
+        console.log(token);
+        console.log(userType);
+        console.log(userName);
+
         let resRole = res.data.role;
         if (resRole === "Admin") {
           navigate("/admindashboard");
