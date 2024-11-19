@@ -40,7 +40,9 @@ This web application leverages Artificial Intelligence (AI) and Machine Learning
 - **POST /upload**: Upload files for processing.
 - **GET /download**: Retrieve uploaded files.
 
-## Installation
+![Screenshot 2024-11-18 at 7 14 48 PM](https://github.com/user-attachments/assets/df8347df-cc3e-4818-8f72-707797761ff4)
+
+![Screenshot 2024-11-18 at 7 16 50 PM](https://github.com/user-attachments/assets/cc730ee9-ed62-45f2-98bf-2ac07722312f)
 
 ### Prerequisites
 
@@ -49,3 +51,4 @@ This web application leverages Artificial Intelligence (AI) and Machine Learning
 - PyMongo
 - Scikit-learn
 - GloVe word embeddings
+
